@@ -78,9 +78,7 @@ require __DIR__ . '/app/partials/header.php';
             <section class="materials image-stage" id="materials" aria-label="Technical specifications and materials"
                 data-prototype="materials"><img class="stage-photo" src="assets/optimized/materials.webp"
                     alt="SENA watch with red woven strap on burgundy velvet" width="1900" height="1089"
-                    loading="lazy"><button class="more-card" data-detail="blue"><img
-                        src="assets/optimized/product-blue.webp" alt="Blue Warisan 3-Hands Date" width="400" height="254"
-                        loading="lazy"><span>More</span></button>
+                    loading="lazy">
                 <div class="materials-copy prototype-copy">
                     <h2>TECHNICAL SPECIFICATIONS &amp; MATERIALS</h2>
                     <p>Engineered for daily life</p><a class="white-arrow" href="specifications.php"
@@ -144,11 +142,9 @@ require __DIR__ . '/app/partials/header.php';
                 </div>
             </section>
             <section class="legacy" id="legacy" aria-label="The SENA legacy">
-                <blockquote><span aria-hidden="true">“</span>A true legacy isn’t meant to be locked away - it is built
-                    to be worn, lived in, and passed down through generations.</blockquote><img class="legacy-lifestyle"
+                <blockquote aria-live="polite" aria-atomic="true"><span aria-hidden="true">“</span><p id="legacy-quote">We built SENA for the new generation—from young hustlers to seasoned collectors—to prove that world-class horology belongs right here.</p></blockquote><img class="legacy-lifestyle"
                     src="assets/optimized/lifestyle.webp" alt="SENA watch worn every day" width="650" height="650"
-                    loading="lazy"><img class="legacy-packaging" src="assets/optimized/packaging.webp"
-                    alt="SENA presentation box" width="650" height="402" loading="lazy">
+                    loading="lazy">
                 <div class="legacy-side"><img id="legacy-photo" src="assets/optimized/watch-trio.webp"
                         alt="Three SENA watches with colorful straps" width="379" height="379" loading="lazy">
                     <h2>Trusted Worldwide<br>For Excellence</h2>

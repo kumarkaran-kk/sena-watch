@@ -21,7 +21,7 @@ $homeLink = $isHomePage ? '' : 'index.php';
 <?php endif; ?>
     <link rel="stylesheet" href="assets/fonts/fonts.css">
     <link rel="stylesheet" href="assets/css/global.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css?v=<?= filemtime(dirname(__DIR__, 2) . '/assets/css/style.css') ?>">
     <link rel="stylesheet" href="assets/css/inner.css">
 <?php if (!empty($isProductPage)): ?>
     <link rel="stylesheet" href="assets/css/product.css">
@@ -29,7 +29,7 @@ $homeLink = $isHomePage ? '' : 'index.php';
 <?php endif; ?>
     <script id="sena-catalog" type="application/json"><?= json_encode($senaProducts, JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) ?></script>
     <script id="sena-config" type="application/json"><?= json_encode($senaConfig, JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) ?></script>
-    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/main.js?v=<?= filemtime(dirname(__DIR__, 2) . '/assets/js/main.js') ?>" defer></script>
 </head>
 
 <body>

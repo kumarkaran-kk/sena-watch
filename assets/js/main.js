@@ -130,8 +130,52 @@
 
   }
 
-  const legacyImages=[['watch-trio','Three SENA watches with colorful straps'],['lifestyle','A SENA watch worn every day'],['packaging','SENA presentation box']];
-  let legacyIndex=0;
-  $$('[data-legacy]').forEach(button=>button.addEventListener('click',()=>{legacyIndex=(legacyIndex+Number(button.dataset.legacy)+legacyImages.length)%legacyImages.length;const [src,alt]=legacyImages[legacyIndex];$('#legacy-photo').src=`assets/optimized/${src}.webp`;$('#legacy-photo').alt=alt;}));
+  const legacyImages=[
+    ['watch-trio','Three SENA watches with colorful straps','We built SENA for the new generation—from young hustlers to seasoned collectors—to prove that world-class horology belongs right here.'],
+    ['lifestyle','A SENA watch worn every day','A true legacy isn’t meant to be locked away—it is built to be worn, lived in, and passed down through generations.'],
+    ['packaging','SENA presentation box','In an age of endless screens, SENA brings back the pure, intentional ritual of wearing a real watch.']
+  ];
+  const legacySection = $('#legacy');
+  if (legacySection) {
+    let legacyIndex=0, legacyTimer, legacyVisible=false;
+    const showLegacy = step => {
+      legacyIndex=(legacyIndex+step+legacyImages.length)%legacyImages.length;
+      const [src,alt,quote]=legacyImages[legacyIndex];
+      $('#legacy-photo').src=`assets/optimized/${src}.webp`;
+      $('#legacy-photo').alt=alt;
+      $('#legacy-quote').textContent=quote;
+    };
+    const scheduleLegacy = () => {
+      clearTimeout(legacyTimer);
+      if (!legacyVisible || document.hidden) return;
+      legacyTimer=setTimeout(()=>{showLegacy(1);scheduleLegacy();},5000);
+    };
+    $$('[data-legacy]',legacySection).forEach(button=>button.addEventListener('click',()=>{
+      showLegacy(Number(button.dataset.legacy));
+      scheduleLegacy();
+    }));
+    new IntersectionObserver(entries=>{
+      const visible=entries[0].isIntersecting && entries[0].intersectionRatio>=.2;
+      if (visible!==legacyVisible) { legacyVisible=visible; scheduleLegacy(); }
+    },{threshold:[0,.2]}).observe(legacySection);
+    document.addEventListener('visibilitychange',scheduleLegacy);
+  }
+  const comingSoon = $('#coming-soon');
+  if (comingSoon) {
+    const moveLight = event => {
+      const bounds = comingSoon.getBoundingClientRect();
+      comingSoon.style.setProperty('--light-x', `${event.clientX - bounds.left}px`);
+      comingSoon.style.setProperty('--light-y', `${event.clientY - bounds.top}px`);
+      comingSoon.classList.add('is-lit');
+    };
+    const hideLight = () => comingSoon.classList.remove('is-lit');
+    comingSoon.addEventListener('pointerenter', event => { if (event.pointerType !== 'touch') moveLight(event); });
+    comingSoon.addEventListener('pointermove', moveLight, {passive:true});
+    comingSoon.addEventListener('pointerdown', moveLight, {passive:true});
+    comingSoon.addEventListener('pointerleave', hideLight);
+    comingSoon.addEventListener('pointercancel', hideLight);
+    comingSoon.addEventListener('pointerup', event => { if (event.pointerType === 'touch') hideLight(); });
+    window.addEventListener('blur', hideLight);
+  }
   $('#copyright-year').textContent=String(new Date().getFullYear());
 })();
