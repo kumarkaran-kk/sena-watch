@@ -32,10 +32,10 @@
   });
   function showProduct(id) {
     const product = products[productId(id)];
-    if (product) visit(product.url);
+    if (product && !product.comingSoon) visit(product.url);
   }
   function resultMarkup(ids) {
-    return ids.map(id => `<button class="result-row" data-detail="${id}"><img src="${products[id].image}" alt="" width="60" height="80"><span>${products[id].name}<small>${products[id].edition} · ${products[id].color}</small></span><span aria-hidden="true">↗</span></button>`).join('');
+    return ids.map(id => `<button class="result-row" ${products[id].comingSoon ? 'disabled' : `data-detail="${id}"`}><img src="${products[id].image}" alt="" width="60" height="80"><span>${products[id].name}<small>${products[id].edition} · ${products[id].color}</small></span>${products[id].comingSoon ? '<span class="search-coming-soon">Coming Soon</span>' : '<span aria-hidden="true">↗</span>'}</button>`).join('');
   }
   const info = {
     about: ['About SENA', 'SENA was born to ensure that the art of classic watchmaking remains vibrant for future generations. While smart tech surrounds us, SENA stands for something permanent: a reliable, practical tool watch that simply tells time and date with quiet confidence. It’s built to be grabbed as reflexively as your car keys before stepping out to face the world.', 'A true legacy isn’t meant to be locked away — it is built to be worn, lived in, and passed down through generations.'],
@@ -51,7 +51,7 @@
   function openPanel(type) {
     if (visit(config.urls?.[type])) return;
     if (type === 'search') {
-      showDialog(`<h2 id="dialog-title">Find your SENA</h2><label class="sr-only" for="watch-search">Search watches by name or color</label><input class="search-input" id="watch-search" type="search" placeholder="Try chronograph, ladies, or green" autocomplete="off"><p class="sr-only" id="search-status" role="status"></p><div id="search-results">${resultMarkup(Object.keys(products))}</div>`);
+      showDialog(`<h2 id="dialog-title">Find your SENA</h2><label class="sr-only" for="watch-search">Search watches by name or color</label><input class="search-input" id="watch-search" type="search" placeholder="Try chronograph, burgundy, or green" autocomplete="off"><p class="sr-only" id="search-status" role="status"></p><div id="search-results">${resultMarkup(Object.keys(products))}</div>`);
       $('#watch-search').addEventListener('input', event => {
         const query = event.target.value.trim().toLowerCase();
         const ids = Object.keys(products).filter(id => (`sena ${products[id].name} ${products[id].edition} ${products[id].movement} ${products[id].color} ${id}`).toLowerCase().includes(query));

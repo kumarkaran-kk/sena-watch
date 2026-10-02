@@ -13,19 +13,23 @@ $homeLink = $isHomePage ? '' : 'index.php';
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#280510">
+    <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/images/favicon-192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
     <meta name="description"
         content="<?= htmlspecialchars($pageDescription, ENT_QUOTES, 'UTF-8') ?>">
     <title><?= htmlspecialchars($pageTitle, ENT_QUOTES, 'UTF-8') ?></title>
 <?php if ($isHomePage): ?>
     <link rel="preload" href="assets/optimized/hero.webp" as="image" fetchpriority="high">
 <?php endif; ?>
-    <link rel="stylesheet" href="assets/fonts/fonts.css">
-    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/fonts/fonts.css?v=<?= filemtime(dirname(__DIR__, 2) . '/assets/fonts/fonts.css') ?>">
+    <link rel="stylesheet" href="assets/css/global.css?v=<?= filemtime(dirname(__DIR__, 2) . '/assets/css/global.css') ?>">
     <link rel="stylesheet" href="assets/css/style.css?v=<?= filemtime(dirname(__DIR__, 2) . '/assets/css/style.css') ?>">
-    <link rel="stylesheet" href="assets/css/inner.css">
+    <link rel="stylesheet" href="assets/css/inner.css?v=<?= filemtime(dirname(__DIR__, 2) . '/assets/css/inner.css') ?>">
 <?php if (!empty($isProductPage)): ?>
-    <link rel="stylesheet" href="assets/css/product.css">
-    <script src="assets/js/product.js" defer></script>
+    <link rel="stylesheet" href="assets/css/product.css?v=<?= filemtime(dirname(__DIR__, 2) . '/assets/css/product.css') ?>">
+    <script src="assets/js/product.js?v=<?= filemtime(dirname(__DIR__, 2) . '/assets/js/product.js') ?>" defer></script>
 <?php endif; ?>
     <script id="sena-catalog" type="application/json"><?= json_encode($senaProducts, JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) ?></script>
     <script id="sena-config" type="application/json"><?= json_encode($senaConfig, JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) ?></script>

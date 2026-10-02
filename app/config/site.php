@@ -1,7 +1,7 @@
 <?php
 // Public-facing configuration, also serialized for the browser. Do not put secrets here.
 return [
-    'storeUrl' => 'https://www.indiekonnect.com/',
+    'storeUrl' => 'https://joinignite.com/',
     'urls' => [
         'account' => '', 'blog' => '', 'contact' => 'contact.php',
         'services' => 'owners-guide.php#service', 'privacy' => '',

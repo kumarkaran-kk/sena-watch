@@ -60,8 +60,8 @@ require __DIR__ . '/app/partials/header.php';
                                 src="assets/optimized/product-blue.webp" alt="Blue SENA Warisan 3-Hands Date" width="423"
                                 height="546" loading="lazy"><span class="product-label"><span>SENA</span>Warisan
                                 3-Hands Date</span></button></article>
-                    <article class="product-card" data-product="chronograph-green"><button class="product-link" data-detail="chronograph-green"
-                            aria-label="View green SENA Warisan Chronograph"><img class="product-photo"
+                    <article class="product-card" data-product="chronograph-green"><span class="coming-soon-badge">Coming Soon</span><button class="product-link" disabled
+                            aria-label="Green SENA Warisan Chronograph ? coming soon"><img class="product-photo"
                                 src="assets/optimized/product-forest.webp"
                                 alt="Green Warisan Chronograph in a forest setting" width="423" height="546"
                                 loading="lazy"><span class="product-label"><span>SENA</span>Warisan

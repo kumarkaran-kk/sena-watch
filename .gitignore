@@ -1,0 +1,32 @@
+# Local environment settings; keep example configuration trackable.
+.env
+.env.*
+!.env.example
+!.env.sample
+.user.ini
+
+# Developer dependencies and temporary working files.
+node_modules/
+.work/
+.cache/
+coverage/
+playwright-report/
+test-results/
+
+# Logs and temporary editor files.
+*.log
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# Local editor and operating-system settings.
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Local deployment package, if one is created later.
+/sena-site.zip
