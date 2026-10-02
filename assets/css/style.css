@@ -352,5 +352,7 @@ dialog::backdrop { background:#18050dbb; backdrop-filter:blur(5px); }
 /* Keep unreleased watch photography partially concealed without dimming labels. */
 .is-coming-soon .catalog-image,.is-coming-soon .pdp-related-image{position:relative}
 .is-coming-soon .catalog-image::after,.is-coming-soon .pdp-related-image::after{content:'';position:absolute;inset:0;background:rgba(0,0,0,.7);pointer-events:none}
-.is-coming-soon .product-photo,.result-row.is-coming-soon img{filter:brightness(.3)}
+.is-coming-soon .catalog-image img,.is-coming-soon .pdp-related-image img{filter:blur(6px)}
+.is-coming-soon .product-photo{filter:brightness(.3) blur(6px)}
+.result-row.is-coming-soon img{filter:brightness(.3) blur(3px)}
 @media(hover:hover){.is-coming-soon .catalog-image:hover img{transform:none}.pdp-related-card.is-coming-soon:hover .pdp-related-image{transform:none}}
