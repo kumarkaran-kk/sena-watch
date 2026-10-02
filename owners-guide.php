@@ -4,12 +4,84 @@ $pageDescription = 'Care for your SENA watch: quick-release straps, compass beze
 require __DIR__ . '/app/partials/header.php';
 ?>
 <main id="main" class="inner-page">
-    <section class="inner-title"><p class="eyebrow">THE OWNER’S GUIDE</p><h1>Made to be<br>part of your life.</h1><p>A little care goes a long way. Get to know your SENA, from its quick-release straps to the support behind every timepiece.</p></section>
+    <section class="inner-title">
+        <p class="eyebrow">THE OWNER’S GUIDE</p>
+        <h1>Made to be<br>part of your life.</h1>
+        <p>A little care goes a long way. Get to know your SENA, from its quick-release straps to the support behind every timepiece.</p>
+    </section>
     <nav class="guide-nav" aria-label="Owner’s guide sections"><a href="#straps">Strap changes</a><a href="#compass">Compass bezel</a><a href="#care">Everyday care</a><a href="#warranty">Warranty</a><a href="#service">Service</a></nav>
-    <section class="inner-section story-grid" id="straps"><div><p class="eyebrow">01 / QUICK-RELEASE STRAPS</p><h2>Versatility at<br>your fingertips.</h2><p>Transition between matching leather and high-density canvas—no tools required.</p></div><ol class="care-steps"><li><h3>Rest your watch</h3><p>Turn your timepiece face-down on a soft cloth.</p></li><li><h3>Release the strap</h3><p>Slide the quick-release lever inward to compress the spring pin.</p></li><li><h3>Make the switch</h3><p>Swap straps and release the lever until it clicks securely into place. Check that the strap is secure before wearing.</p></li></ol></section>
-    <section class="inner-section story-grid guide-divider" id="compass"><div><p class="eyebrow">02 / SOLAR COMPASS BEZEL</p><h2>A sense<br>of direction.</h2></div><div class="prose"><p>For the 3-Hands Date models with compass markings, the hour hand and sunlight can provide an approximate directional guide in the Northern Hemisphere.</p><ol><li>Hold the watch level and point the hour hand toward the sun.</li><li>The midpoint between the hour hand and 12 o’clock indicates south.</li><li>Rotate the bezel to align the S marker with this midpoint.</li></ol><p class="muted-copy">This is an approximate orientation method, not a substitute for a navigation instrument. The chronograph models use different bezel markings.</p></div></section>
-    <section class="inner-section story-grid guide-divider" id="care"><div><p class="eyebrow">03 / EVERYDAY CARE</p><h2>Keep it<br>going strong.</h2></div><div class="prose"><h3>Water resistance</h3><p>The Warisan collection is rated to 5 ATM / 50 metres. Keep the crown fully secured before exposure to water and avoid operating the crown or pushers while wet.</p><h3>Battery replacement</h3><p>Battery replacements can be performed by a qualified watch technician. Request a water-resistance pressure check upon replacement.</p><h3>Leather and canvas</h3><p>Use the quick-release system to choose the strap that suits your day. Let a damp strap dry before storing your watch.</p></div></section>
-    <section class="inner-section story-grid warranty-section" id="warranty"><div><p class="eyebrow">04 / PEACE OF MIND</p><h2>Two years.<br>Worldwide.</h2></div><div class="prose"><h3>2-Year International Warranty</h3><p>SENA Timepieces guarantees your watch against manufacturing defects for two (2) years from the date of purchase. This warranty covers the movement, hands, and dial.</p><p>It does not cover normal wear and tear on straps, accidental glass breakage, or damage resulting from improper handling.</p><p>Keep your proof of purchase for any warranty evaluation.</p></div></section>
-    <section class="inner-section story-grid" id="service"><div><p class="eyebrow">05 / SERVICE &amp; REPAIRS</p><h2>Care beyond<br>the everyday.</h2></div><div class="prose"><p>For servicing or warranty evaluation, securely package your watch and send it to the SENA Watches office in Malaysia.</p><address>Unit CT02-06-05, Pavilion Damansara Heights,<br>3 Jalan Damanlela, Pusat Bandar Damansara,<br>50490 Kuala Lumpur, Malaysia.</address><p>Use a tracked and insured shipping service. Include your proof of purchase and a brief description of the service request inside the package.</p><a class="text-link" href="contact.php">Contact &amp; support ↗</a></div></section>
+    <section class="inner-section story-grid" id="straps">
+        <div>
+            <p class="eyebrow">01 / QUICK-RELEASE STRAPS</p>
+            <h2>Versatility at<br>your fingertips.</h2>
+            <p>Transition between matching leather and high-density canvas—no tools required.</p>
+        </div>
+        <ol class="care-steps">
+            <li>
+                <h3>Rest your watch</h3>
+                <p>Turn your timepiece face-down on a soft cloth.</p>
+            </li>
+            <li>
+                <h3>Release the strap</h3>
+                <p>Slide the quick-release lever inward to compress the spring pin.</p>
+            </li>
+            <li>
+                <h3>Make the switch</h3>
+                <p>Swap straps and release the lever until it clicks securely into place. Check that the strap is secure before wearing.</p>
+            </li>
+        </ol>
+    </section>
+    <section class="inner-section story-grid guide-divider" id="compass">
+        <div>
+            <p class="eyebrow">02 / SOLAR COMPASS BEZEL</p>
+            <h2>A sense<br>of direction.</h2>
+        </div>
+        <div class="prose">
+            <p>For the 3-Hands Date models with compass markings, the hour hand and sunlight can provide an approximate directional guide in the Northern Hemisphere.</p>
+            <ol>
+                <li>Hold the watch level and point the hour hand toward the sun.</li>
+                <li>The midpoint between the hour hand and 12 o’clock indicates south.</li>
+                <li>Rotate the bezel to align the S marker with this midpoint.</li>
+            </ol>
+            <p class="muted-copy">This is an approximate orientation method, not a substitute for a navigation instrument. The chronograph models use different bezel markings.</p>
+        </div>
+    </section>
+    <section class="inner-section story-grid guide-divider" id="care">
+        <div>
+            <p class="eyebrow">03 / EVERYDAY CARE</p>
+            <h2>Keep it<br>going strong.</h2>
+        </div>
+        <div class="prose">
+            <h3>Water resistance</h3>
+            <p>The Warisan collection is rated to 5 ATM / 50 metres. Keep the crown fully secured before exposure to water and avoid operating the crown or pushers while wet.</p>
+            <h3>Battery replacement</h3>
+            <p>Battery replacements can be performed by a qualified watch technician. Request a water-resistance pressure check upon replacement.</p>
+            <h3>Leather and canvas</h3>
+            <p>Use the quick-release system to choose the strap that suits your day. Let a damp strap dry before storing your watch.</p>
+        </div>
+    </section>
+    <section class="inner-section story-grid warranty-section" id="warranty">
+        <div>
+            <p class="eyebrow">04 / PEACE OF MIND</p>
+            <h2>Two years.<br>Worldwide.</h2>
+        </div>
+        <div class="prose">
+            <h3>2-Year International Warranty</h3>
+            <p>SENA Timepieces guarantees your watch against manufacturing defects for two (2) years from the date of purchase. This warranty covers the movement, hands, and dial.</p>
+            <p>It does not cover normal wear and tear on straps, accidental glass breakage, or damage resulting from improper handling.</p>
+            <p>Keep your proof of purchase for any warranty evaluation.</p>
+        </div>
+    </section>
+    <section class="inner-section story-grid" id="service">
+        <div>
+            <p class="eyebrow">05 / SERVICE &amp; REPAIRS</p>
+            <h2>Care beyond<br>the everyday.</h2>
+        </div>
+        <div class="prose">
+            <p>For servicing or warranty evaluation, securely package your watch and send it to the SENA Watches office in Malaysia.</p>
+            <address>Unit CT02-06-05, Pavilion Damansara Heights,<br>3 Jalan Damanlela, Pusat Bandar Damansara,<br>50490 Kuala Lumpur, Malaysia.</address>
+            <p>Use a tracked and insured shipping service. Include your proof of purchase and a brief description of the service request inside the package.</p><a class="text-link" href="contact.php">Contact &amp; support ↗</a>
+        </div>
+    </section>
 </main>
 <?php require __DIR__ . '/app/partials/footer.php'; ?>
